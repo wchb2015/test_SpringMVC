@@ -3,4 +3,43 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:applicationContext.xml
+        </param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>TestServletA</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestServletA</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServletA</servlet-name>
+        <url-pattern>/TestServletA</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestServletB</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestServletB</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServletB</servlet-name>
+        <url-pattern>/TestServletB</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestServletC</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestServletC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServletC</servlet-name>
+        <url-pattern>/TestServletC</url-pattern>
+    </servlet-mapping>
 </web-app>

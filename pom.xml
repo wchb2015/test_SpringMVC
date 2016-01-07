@@ -7,6 +7,8 @@
     <groupId>test</groupId>
     <artifactId>springmvc</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>test_springmvc</name>
 
     <dependencies>
         <!--common start-->
@@ -54,4 +56,27 @@
         <!--common end-->
 
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties></properties>
+        </profile>
+    </profiles>
+    <!--  Build Settings  -->
+    <!-- http://maven.apache.org/pom.html#Build_Settings -->
+    <build>
+        <finalName>${artifactId}-${version}</finalName>
+        <resources>
+            <resource>
+                <!-- directory: 资源所在的位置 -->
+                <directory>src/main/resources</directory>
+                <!-- filtering: 是否替换资源中的属性placehold -->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>
