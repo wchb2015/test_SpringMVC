@@ -14,14 +14,6 @@ import java.util.Enumeration;
 public class TestServletC extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        request.getContentLength();
-        System.out.println(request.getParameter("username"));
-        System.out.println(request.getParameter("passwd"));
-
-        Enumeration names = request.getParameterNames();// 获取所有参数名称
-        while (names.hasMoreElements()) {
-            System.out.println("_________" + names.nextElement());
-        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

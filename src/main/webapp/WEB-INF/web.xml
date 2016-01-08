@@ -5,6 +5,8 @@
          version="3.1">
 
 
+    <display-name>test_Dspringmvc</display-name>
+
     <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>classpath:log4j.properties</param-value>
@@ -42,4 +44,35 @@
         <servlet-name>TestServletC</servlet-name>
         <url-pattern>/TestServletC</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestCookieA</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestCookieA</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestCookieA</servlet-name>
+        <url-pattern>/TestCookieA</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestCookieB</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestCookieB</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestCookieB</servlet-name>
+        <url-pattern>/TestCookieB</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.springmvc.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <error-page>
+        <location>/error.jsp</location>
+    </error-page>
 </web-app>

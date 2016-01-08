@@ -3,6 +3,7 @@
 *.class
 *.jar
 *.war
+zookeeper.out
 # Mobile Tools for Java (J2ME)
 out/
 .idea/
