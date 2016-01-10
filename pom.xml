@@ -47,7 +47,9 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+        <!--common end-->
 
+        <!-- java web start-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -66,13 +68,12 @@
             <version>1.2</version>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
             <version>1.1.2</version>
-        </dependency>
-
-        <!--common end-->
+        </dependency>-->
+        <!-- java web end-->
 
     </dependencies>
 
