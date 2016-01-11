@@ -1,7 +1,6 @@
 package com.springmvc.servlet;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +16,6 @@ import java.io.IOException;
  * 3.默认服务器会在某个Servlet第一次收到请求时创建它。
  */
 
-//@WebServlet(name = "TestServletA")
 public class TestServletA implements Servlet {
 
     public void init(ServletConfig servletConfig) throws ServletException {
@@ -56,9 +54,6 @@ public class TestServletA implements Servlet {
     public void destroy() {
         System.out.println("_____________destroy()");
     }
-
-
-
 
    /* protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
