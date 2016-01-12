@@ -19,7 +19,6 @@ public class LoginServlet extends HttpServlet {
         String passwd = request.getParameter("passwd");
 
 
-
         Enumeration names = request.getParameterNames();// 获取所有参数名称
         while (names.hasMoreElements()) {
             System.out.println("_________" + names.nextElement());
