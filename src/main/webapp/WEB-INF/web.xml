@@ -18,15 +18,29 @@
         </param-value>
     </context-param>
 
+    <!--filter start-->
     <filter>
         <filter-name>helloFilter</filter-name>
         <filter-class>com.springmvc.filter.HelloFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>helloFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/helloFilter/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <!--default is REQUEST-->
+    </filter-mapping>
+
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>com.springmvc.filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>charset</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 
     <filter>
@@ -38,23 +52,27 @@
         <filter-name>IPFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <!--filter end-->
 
-    <listener>
-        <listener-class>com.springmvc.listener.TestHttpSessionListener</listener-class>
-    </listener>
+    <!--listener start-->
+    <!-- <listener>
+         <listener-class>com.springmvc.listener.TestHttpSessionListener</listener-class>
+     </listener>
 
-    <listener>
-        <listener-class>com.springmvc.listener.TestServletContextListener</listener-class>
-    </listener>
+     <listener>
+         <listener-class>com.springmvc.listener.TestServletContextListener</listener-class>
+     </listener>
 
-    <listener>
-        <listener-class>com.springmvc.listener.TestServletRequestListener</listener-class>
-    </listener>
+     <listener>
+         <listener-class>com.springmvc.listener.TestServletRequestListener</listener-class>
+     </listener>
 
-    <listener>
-        <listener-class>com.springmvc.listener.TestAttributeListener</listener-class>
-    </listener>
+     <listener>
+         <listener-class>com.springmvc.listener.TestAttributeListener</listener-class>
+     </listener>-->
+    <!--listener end-->
 
+    <!--servlet start-->
     <servlet>
         <servlet-name>TestServletA</servlet-name>
         <servlet-class>com.springmvc.servlet.TestServletA</servlet-class>
@@ -108,6 +126,16 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <servlet-class>com.springmvc.servlet.FileUploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <url-pattern>/FileUploadServlet</url-pattern>
+    </servlet-mapping>
+    <!--servlet end-->
 
     <error-page>
         <location>/error.jsp</location>

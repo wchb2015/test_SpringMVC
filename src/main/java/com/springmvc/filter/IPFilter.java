@@ -27,7 +27,7 @@ public class IPFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         LOG.info("###################__IPFilter_doFilter()_start!");
         HttpServletRequest req = (HttpServletRequest) request;
-        String ip = req.getRemoteAddr();//获取请求方的ip
+        String ip = getRemoteIpAddress(req);//获取请求方的ip
 
         Map<String, Long> ipCountMap = (Map<String, Long>) context.getAttribute("ipCountMap");//在context中获取Map
 
@@ -46,12 +46,37 @@ public class IPFilter implements Filter {
         ipCountMap.put(ip, count);//把ip和次数设置到map中
 
         context.setAttribute("ipCountMap", ipCountMap);//把map存放到context中
+
+        LOG.info(req.getRequestURL() + "?" + req.getQueryString() + " ------------------ start");
         chain.doFilter(request, response);
+        LOG.info(req.getRequestURL() + "?" + req.getQueryString() + " ------------------ end");
+
         LOG.info("###################__ipCountMap:" + ipCountMap.toString());
         LOG.info("###################__IPFilter_doFilter()_end!");
     }
 
     public void destroy() {
 
+    }
+
+
+    public static String getRemoteIpAddress(HttpServletRequest request) {
+        String ip = request.getHeader("x-forwarded-for");
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_CLIENT_IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getRemoteAddr();
+        }
+        return ip;
     }
 }
