@@ -77,7 +77,7 @@ public class FileUploadServlet extends HttpServlet {
 
                     response.getWriter().print("上传文件类型：" + fileItem.getContentType() + "<br/>");// 打印上传文件的类型
                 }
-                
+
             }
 
         } catch (FileUploadException e) {
