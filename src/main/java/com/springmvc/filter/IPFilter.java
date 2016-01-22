@@ -15,7 +15,7 @@ import java.util.Map;
  * Created by wangchongbei on 16-1-13.
  */
 public class IPFilter implements Filter {
-    private static final Log LOG = LogFactory.getLog(IPFilter.class);
+    private Log LOG = LogFactory.getLog(this.getClass());
     private ServletContext context;
 
     public void init(FilterConfig filterConfig) throws ServletException {

@@ -107,7 +107,15 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-            <properties></properties>
+            <properties>
+                <!--wchbtest1@163.com/111111a-->
+                <!-- mail server -->
+                <p.mail.from>wchbtest1@163.com</p.mail.from>
+                <p.mail.from.name>wchbtest1@163.com</p.mail.from.name>
+                <p.mail.host>mail.163.com</p.mail.host>
+                <p.mail.username>wchbtest1@163.com</p.mail.username>
+                <p.mail.password>111111a</p.mail.password>
+            </properties>
         </profile>
     </profiles>
     <!--  Build Settings  -->

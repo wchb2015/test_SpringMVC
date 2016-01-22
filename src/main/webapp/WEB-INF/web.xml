@@ -30,18 +30,18 @@
         <!--default is REQUEST-->
     </filter-mapping>
 
-    <filter>
-        <filter-name>encodingFilter</filter-name>
-        <filter-class>com.springmvc.filter.EncodingFilter</filter-class>
-        <init-param>
-            <param-name>charset</param-name>
-            <param-value>UTF-8</param-value>
-        </init-param>
-    </filter>
-    <filter-mapping>
-        <filter-name>encodingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    <!--<filter>-->
+        <!--<filter-name>encodingFilter</filter-name>-->
+        <!--<filter-class>com.springmvc.filter.EncodingFilter</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>charset</param-name>-->
+            <!--<param-value>UTF-8</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>encodingFilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
 
     <filter>
         <display-name>IPFilter</display-name>
@@ -73,6 +73,15 @@
     <!--listener end-->
 
     <!--servlet start-->
+    <servlet>
+        <servlet-name>TestMVCServlet</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestMVCServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestMVCServlet</servlet-name>
+        <url-pattern>/TestMVCServlet</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>TestServletA</servlet-name>
         <servlet-class>com.springmvc.servlet.TestServletA</servlet-class>
@@ -134,6 +143,24 @@
     <servlet-mapping>
         <servlet-name>FileUploadServlet</servlet-name>
         <url-pattern>/FileUploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>com.springmvc.servlet.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/DownloadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestAjaxServlet</servlet-name>
+        <servlet-class>com.springmvc.servlet.TestAjaxServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestAjaxServlet</servlet-name>
+        <url-pattern>/TestAjaxServlet</url-pattern>
     </servlet-mapping>
     <!--servlet end-->
 

@@ -20,7 +20,7 @@
     System.out.println(exception.getMessage());
     System.out.println("______" + exception.getStackTrace().toString());
 %>
-
+${msg}
 
 </body>
 </html>

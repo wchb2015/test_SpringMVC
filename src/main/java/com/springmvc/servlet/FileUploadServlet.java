@@ -1,6 +1,7 @@
 package com.springmvc.servlet;
 
 import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadBase;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -46,6 +47,8 @@ public class FileUploadServlet extends HttpServlet {
         DiskFileItemFactory factory = new DiskFileItemFactory();
         ServletFileUpload sfu = new ServletFileUpload(factory);
 
+        sfu.setFileSizeMax(10 * 1024 * 1024);//10M
+
         try {
 
             List<FileItem> fileItemList = sfu.parseRequest(request);
@@ -60,16 +63,17 @@ public class FileUploadServlet extends HttpServlet {
                 } else {
 
                     String name = fileItem.getName();//获取上传文件的名称
-                    // 如果上传的文件名称为空，即没有指定上传文件
+                    // 如果上传的文件名称为空,即没有指定上传文件
                     if (StringUtils.isEmpty(name)) {
                         continue;
                     }
 
-                    String savePath = this.getServletContext().getRealPath("/uploads");  // 获取真实路径，对应${项目目录}/uploads，当然，这个目录必须存在
+                    String savePath = this.getServletContext().getRealPath("/WEB-INF/uploads");  // 获取真实路径，对应${项目目录}/uploads,当然,这个目录必须存在
 
                     File file = new File(savePath, name);  // 通过uploads目录和文件名称来创建File对象
 
-                    fileItem.write(file); // 把上传文件保存到指定位置
+                    // TODO: 16-1-22
+                    //fileItem.write(file); // 把上传文件保存到指定位置
 
                     response.getWriter().print("上传文件名：" + name + "<br/>"); // 打印上传文件的名称
 
@@ -80,9 +84,18 @@ public class FileUploadServlet extends HttpServlet {
 
             }
 
-        } catch (FileUploadException e) {
-            throw new RuntimeException(e);
         } catch (Exception e) {
+
+            // 判断抛出的异常的类型是否为FileUploadBase.FileSizeLimitExceededException
+            // 如果是,说明上传文件时超出了限制.
+            if (e instanceof FileUploadBase.FileSizeLimitExceededException) {
+                // 在request中保存错误信息
+                request.setAttribute("msg", "上传失败！上传的文件超出了10M!");
+                // 转发到index.jsp页面中！在index.jsp页面中需要使用${msg}来显示错误信息
+                request.getRequestDispatcher("/error.jsp").forward(request, response);
+                return;
+            }
+
             throw new RuntimeException(e);
         }
     }

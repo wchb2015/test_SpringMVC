@@ -18,7 +18,6 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String passwd = request.getParameter("passwd");
 
-
         Enumeration names = request.getParameterNames();// 获取所有参数名称
         while (names.hasMoreElements()) {
             System.out.println("_________" + names.nextElement());
@@ -40,8 +39,6 @@ public class LoginServlet extends HttpServlet {
         } else {
             response.getWriter().print("登录失败～！");
         }
-
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
