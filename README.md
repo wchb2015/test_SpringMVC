@@ -19,5 +19,8 @@
 > A value of REQUEST means the Filter will be applied under ordinary client calls to the path or servlet.  
 > A value of INCLUDE means the Filter will be applied under RequestDispatcher.include() calls.   
 > A value of ERROR means the Filter will be applied under the error page mechanism.   
-> The absence of any dispatcher elements in a filter-mapping indicates a default of applying filters only under ordinary client calls to the path or servlet.  
+> The absence of any dispatcher elements in a filter-mapping indicates a default of applying filters only under ordinary client calls to the path or servlet.   
+  
+  
 ##JavaMail
+
