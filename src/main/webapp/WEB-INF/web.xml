@@ -74,6 +74,21 @@
 
     <!--servlet start-->
     <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--contextConfigLocation配置springmvc加载的配置文件(配置处理映射器,适配器等等),如果不配置contextConfigLocation,默认加载的是/WEB-INF/servlet_name-servlet.xml(springmvc-servlet.xml-->
+       <!-- <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:springmvc.xml</param-value>
+        </init-param>-->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>TestMVCServlet</servlet-name>
         <servlet-class>com.springmvc.servlet.TestMVCServlet</servlet-class>
     </servlet>
