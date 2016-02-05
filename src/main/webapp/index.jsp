@@ -48,25 +48,6 @@ $END$
         </div>
     </div>
 
-
-    <%--  <form id="ff" method="post">
-          <div style="color:red;" class="message"><label></label></div>
-          <div style="margin:20px;">
-              <span for="username" class="login">用户名：</span>
-              <input id="username" class="easyui-validatebox" type="text" name="user.userName" required="true"></input>
-          </div>
-          <div style="margin:20px;">
-              <span for="passport" class="login">密　码：</span>
-              <input id="password" class="easyui-validatebox" type="password" name="user.password"
-                     required="true"></input>
-          </div>
-          <div style="margin:20px;">
-              <span class="login"> </span>
-              <input type="submit" value="登录"/>
-              <input type="reset" value="取消"/>
-          </div>
-      </form>--%>
-
 </form>
 </body>
 </html>
