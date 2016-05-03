@@ -2,6 +2,8 @@ package com.springmvc.action;
 
 
 import com.springmvc.model.User;
+import com.springmvc.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +23,9 @@ import java.util.List;
 @org.springframework.stereotype.Controller
 @RequestMapping("/user-module")
 public class UserController {
+
+    @Autowired
+    private UserService userService;
 
 
     @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
@@ -45,5 +50,9 @@ public class UserController {
 
         modelAndView.setViewName("userList"); //指定视图*/
 
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 }
