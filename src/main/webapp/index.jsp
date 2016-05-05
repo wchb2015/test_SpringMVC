@@ -24,30 +24,23 @@ pageEncoding和contentType的关系：
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <%-- JSP注释   [这就相当于给客户端发送了响应头content-type，指定当前页面的编码为utf-8]--%>
     <!--HTML注释-->
+    <style>
+        div {
+            border: 1px solid red;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-$END$
-<a href="TestServletC">TestServletC</a>
+<div>
+    <form method="post" id="test" action="/test_springmvc/LoginServlet">
+        用户名：<input name="username" type="text"/>
+        密码： <input name="password" type="password"/> <br/>
+        <input type="submit" value="登录"/>
+        <input type="reset" value="取消"/>
+    </form>
+</div>
 
-<br>
 
-<form method="post" id="test" action="/test_springmvc/LoginServlet">
-
-    <div align="center">
-        <div>
-            用户名：<input name="username" type="text"/>
-        </div>
-
-        <div>
-            密码： <input name="passwd" type="password"/>
-        </div>
-
-        <div>
-            <input type="submit" value="登录"/>
-            <input type="reset" value="取消"/>
-        </div>
-    </div>
-
-</form>
 </body>
 </html>

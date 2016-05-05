@@ -42,6 +42,8 @@ public class UserController {
 
         request.setAttribute("userList", userList);
 
+        userService.queryUser(null);
+
         return "userList";
 
        /* ModelAndView modelAndView = new ModelAndView();
@@ -54,5 +56,9 @@ public class UserController {
 
     public void setUserService(UserService userService) {
         this.userService = userService;
+    }
+
+    public UserController() {
+        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
     }
 }

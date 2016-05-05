@@ -25,7 +25,7 @@ public class IPFilter implements Filter {
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        LOG.info("###################__IPFilter_doFilter()_start!");
+        LOG.info("___$$$   IPFilter_doFilter()_start!");
         HttpServletRequest req = (HttpServletRequest) request;
         String ip = getRemoteIpAddress(req);//获取请求方的ip
 
@@ -51,8 +51,8 @@ public class IPFilter implements Filter {
         chain.doFilter(request, response);
         LOG.info(req.getRequestURL() + "?" + req.getQueryString() + " ------------------ end");
 
-        LOG.info("###################__ipCountMap:" + ipCountMap.toString());
-        LOG.info("###################__IPFilter_doFilter()_end!");
+        LOG.info("___$$$   ipCountMap:" + ipCountMap.toString());
+        LOG.info("___$$$   IPFilter_doFilter()_end!");
     }
 
     public void destroy() {

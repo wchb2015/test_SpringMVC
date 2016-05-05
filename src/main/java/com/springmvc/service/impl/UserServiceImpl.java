@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public UserServiceImpl() {
-        System.out.println("___$$$   " + this.getClass().getName() + "initialize()");
+        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
     }
 
     public void setUserDao(UserDao userDao) {

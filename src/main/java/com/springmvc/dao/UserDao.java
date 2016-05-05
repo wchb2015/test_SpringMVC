@@ -21,4 +21,8 @@ public class UserDao {
         System.out.println("___$$$   UserDao.selectUser()");
         return null;
     }
+
+    public UserDao() {
+        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
+    }
 }

@@ -41,6 +41,6 @@ public class TestServletC extends HttpServlet {
         System.out.println("request.getServerPort(): " + request.getServerPort());
 
         response.sendRedirect("/test_springmvc/index.jsp");
-        // 以“/”开头，相对主机，与当前a.html的主机相同，即最终访问的页面为http://localhost:8080/hello2/index.html；
+        // 以“/”开头,相对主机,与当前a.html的主机相同，即最终访问的页面为http://localhost:8080/hello2/index.html；
     }
 }
