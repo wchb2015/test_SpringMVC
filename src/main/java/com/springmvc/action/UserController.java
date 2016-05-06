@@ -27,7 +27,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
+//http://localhost:8080/test_springmvc/user-module/getAllUsers.html
     @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
     public String getUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
 

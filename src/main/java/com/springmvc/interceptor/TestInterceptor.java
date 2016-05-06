@@ -15,7 +15,7 @@ public class TestInterceptor implements HandlerInterceptor {
     //o表示的是倍拦截的请求的目标对象
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         System.out.println("___$$$   TestInterceptor.preHandle()");
-        return false;
+        return true;
     }
 
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o,

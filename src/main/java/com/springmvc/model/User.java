@@ -50,4 +50,17 @@ public class User {
         this.passwd = passwd;
         this.age = age;
     }
+
+    public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", passwd='" + passwd + '\'' +
+                ", age=" + age +
+                ", createTime=" + createTime +
+                '}';
+    }
 }

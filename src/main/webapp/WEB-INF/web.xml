@@ -207,7 +207,7 @@
         </param-value>
     </context-param>
 
-    <error-page>
+  <!--  <error-page>
         <location>/error.jsp</location>
-    </error-page>
+    </error-page>-->
 </web-app>
