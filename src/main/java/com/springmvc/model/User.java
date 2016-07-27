@@ -12,6 +12,14 @@ public class User {
     private int age;
     private Date createTime;
 
+    public User(String username, String passwd, int age) {
+        this.username = username;
+        this.passwd = passwd;
+        this.age = age;
+    }
+
+    public User() {
+    }
 
     public String getUsername() {
         return username;
@@ -43,15 +51,6 @@ public class User {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
-    }
-
-    public User(String username, String passwd, int age) {
-        this.username = username;
-        this.passwd = passwd;
-        this.age = age;
-    }
-
-    public User() {
     }
 
     @Override

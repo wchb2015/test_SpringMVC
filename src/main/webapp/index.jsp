@@ -3,7 +3,6 @@
     //http://localhost:8080/test_springmvc/
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + contextPath + "/";
 %>
-
 <%--
 page指令的pageEncoding和contentType:
 pageEncoding指定当前JSP页面的编码！这个编码是给服务器看的,服务器需要知道当前JSP使用的编码,不然服务器无法正确把JSP编译成java文件.所以这个编码只需要与真实的页面编码一致即可！
@@ -40,7 +39,6 @@ pageEncoding和contentType的关系：
         <input type="reset" value="取消"/>
     </form>
 </div>
-
 
 </body>
 </html>

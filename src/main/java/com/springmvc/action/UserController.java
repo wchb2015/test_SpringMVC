@@ -6,19 +6,11 @@ import com.springmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by wangchongbei on 16-1-26.
- */
-
 
 @org.springframework.stereotype.Controller
 @RequestMapping("/user-module")
@@ -27,7 +19,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//http://localhost:8080/test_springmvc/user-module/getAllUsers.html
+    public UserController() {
+        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
+    }
+
     @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
     public String getUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -56,9 +51,5 @@ public class UserController {
 
     public void setUserService(UserService userService) {
         this.userService = userService;
-    }
-
-    public UserController() {
-        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
     }
 }
