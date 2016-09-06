@@ -1,8 +1,5 @@
 package com.springmvc.model;
 
-/**
- * Created by wchb7 on 16-5-6.
- */
 public class Admin {
 
     private String username;

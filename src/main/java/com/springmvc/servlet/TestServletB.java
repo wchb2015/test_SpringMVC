@@ -7,10 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by wangchongbei on 16-1-7.
- */
-
 public class TestServletB extends HttpServlet {
 
 

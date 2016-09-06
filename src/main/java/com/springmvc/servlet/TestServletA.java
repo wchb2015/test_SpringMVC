@@ -1,14 +1,8 @@
 package com.springmvc.servlet;
 
 import javax.servlet.*;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-/**
- * Created by wangchongbei on 16-1-7.
- */
 
 /**
  * 1.不应该在Servlet中便宜创建成员变量，因为可能会存在一个线程对这个成员变量进行写操作，另一个线程对这个成员变量进行读操作。

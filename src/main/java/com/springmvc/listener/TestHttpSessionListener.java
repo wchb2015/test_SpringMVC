@@ -6,9 +6,6 @@ import org.apache.commons.logging.LogFactory;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-/**
- * Created by wangchongbei on 16-1-13.
- */
 public class TestHttpSessionListener implements HttpSessionListener {
     private static final Log LOG = LogFactory.getLog(TestHttpSessionListener.class);
 

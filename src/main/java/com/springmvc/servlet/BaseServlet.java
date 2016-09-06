@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
-/**
- * Created by wangchongbei on 16-1-12.
- */
 public class BaseServlet extends HttpServlet {
 
     // 它会根据请求中的m，来决定调用本类的哪个方法

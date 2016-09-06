@@ -2,9 +2,6 @@ package com.springmvc.model;
 
 import java.util.Date;
 
-/**
- * Created by wangchongbei on 16-1-8.
- */
 public class User {
 
     private String username;

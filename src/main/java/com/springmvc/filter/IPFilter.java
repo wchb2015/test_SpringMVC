@@ -11,9 +11,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/**
- * Created by wangchongbei on 16-1-13.
- */
+
 public class IPFilter implements Filter {
     private Log LOG = LogFactory.getLog(this.getClass());
     private ServletContext context;

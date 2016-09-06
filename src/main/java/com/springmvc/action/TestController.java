@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @org.springframework.stereotype.Controller
 public class TestController {
 
-
     /**
      * 通过@RequestParam对简单类型的参数进行绑定.
      * 如果不使用@RequestParam,要求request传入参数名称和controller方法的形参名称一致,方可绑定成功.

@@ -6,9 +6,6 @@ import org.apache.commons.logging.LogFactory;
 import javax.servlet.*;
 import java.io.IOException;
 
-/**
- * Created by wangchongbei on 16-1-13.
- */
 public class HelloFilter implements Filter {
     private static final Log LOG = LogFactory.getLog(HelloFilter.class);
 

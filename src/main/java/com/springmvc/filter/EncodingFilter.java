@@ -7,10 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * Created by wangchongbei on 16-1-13.
- */
-
-/**
  * 如果是POST请求,当执行目标Servlet时,Servlet中调用request.getParameter()方法时,就会根据request.setCharacterEncoding()设置的编码来转码！
  * 这说明在过滤器中调用request.setCharacterEncoding()方法会影响在目标Servlet中的request.getParameter()方法的行为！
  * <p/>

@@ -1,30 +1,14 @@
 package com.springmvc.utils;
 
-import com.sun.xml.internal.messaging.saaj.packaging.mime.MessagingException;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.springframework.core.io.FileSystemResource;
 
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.Authenticator;
-import java.net.InetAddress;
-import java.net.PasswordAuthentication;
-import java.net.UnknownHostException;
-import java.util.Date;
-import java.util.List;
-import java.util.Properties;
-import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.util.Properties;
 
-/**
- * Created by wangchongbei on 16-1-18.
- */
 public class MailSenderUtil {
 
 

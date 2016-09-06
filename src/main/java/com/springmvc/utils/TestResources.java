@@ -3,11 +3,11 @@ package com.springmvc.utils;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 
-/**
- * Created by wangchongbei on 16-1-22.
- */
 public class TestResources {
     private static Logger logger = Logger.getLogger(TestResources.class);
 
