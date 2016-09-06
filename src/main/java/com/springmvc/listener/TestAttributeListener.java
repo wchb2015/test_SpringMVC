@@ -10,9 +10,6 @@ import javax.servlet.ServletRequestAttributeListener;
 import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionBindingEvent;
 
-/**
- * Created by wangchongbei on 16-1-13.
- */
 public class TestAttributeListener implements ServletContextAttributeListener, HttpSessionAttributeListener, ServletRequestAttributeListener {
     private static final Log LOG = LogFactory.getLog(TestAttributeListener.class);
 

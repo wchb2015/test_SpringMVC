@@ -2,9 +2,6 @@ package com.springmvc.model;
 
 import java.util.List;
 
-/**
- * Created by wangchongbei on 16-1-13.
- */
 public class Page<T> implements java.io.Serializable {
 
     private static final long serialVersionUID = -3019215476521614796L;

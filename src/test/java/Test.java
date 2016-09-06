@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by wangchongbei on 16-1-7.
- */
 public class Test {
 
     @org.junit.Test

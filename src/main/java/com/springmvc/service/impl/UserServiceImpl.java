@@ -9,10 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by wchb7 on 16-5-3.
- */
-
 @Service
 public class UserServiceImpl implements UserService {
 

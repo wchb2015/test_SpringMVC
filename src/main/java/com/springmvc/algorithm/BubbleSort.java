@@ -3,9 +3,6 @@ package com.springmvc.algorithm;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
- * Created by wangchongbei on 16-1-28.
- */
 public class BubbleSort {
 
     public static void main(String[] args) {

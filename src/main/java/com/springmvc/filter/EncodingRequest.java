@@ -4,9 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.UnsupportedEncodingException;
 
-/**
- * Created by wangchongbei on 16-1-14.
- */
 public class EncodingRequest extends HttpServletRequestWrapper {
 
     private String charset;

@@ -3,10 +3,6 @@ package com.springmvc.algorithm;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
- * Created by wangchongbei on 16-1-28.
- */
-
 /*
 基本思想:每次排序的时候设置一个基准点,将小于等于基准点的数全部放到基准点的一边,将大于等于基准点的数全部放到基准点的另一边.
  */

@@ -2,9 +2,6 @@ package com.springmvc.model;
 
 import java.util.Date;
 
-/**
- * Created by wangchongbei on 16-1-26.
- */
 public class AttDetail {
     private static final long serialVersionUID = 8671770986067328177L;
 

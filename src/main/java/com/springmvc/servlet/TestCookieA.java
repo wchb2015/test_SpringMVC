@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.UUID;
 
-/**
- * Created by wangchongbei on 16-1-8.
- */
 public class TestCookieA extends HttpServlet {
     static final Log LOG = LogFactory.getLog(TestCookieA.class);
 

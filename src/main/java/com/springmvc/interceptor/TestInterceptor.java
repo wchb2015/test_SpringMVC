@@ -6,9 +6,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by wchb7 on 16-5-5.
- */
 public class TestInterceptor implements HandlerInterceptor {
 
     //返回值表示是否将当前的请求拦截下来,false请求将被终止,true请求继续执行.

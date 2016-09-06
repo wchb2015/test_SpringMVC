@@ -6,9 +6,6 @@ import org.apache.commons.logging.LogFactory;
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 
-/**
- * Created by wangchongbei on 16-1-13.
- */
 public class TestServletRequestListener implements ServletRequestListener {
     private static final Log LOG = LogFactory.getLog(TestServletRequestListener.class);
 

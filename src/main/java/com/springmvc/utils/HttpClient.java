@@ -7,9 +7,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-/**
- * Created by wchb7 on 16-3-10.
- */
 public class HttpClient {
 
     public static void main(String[] args) throws Exception {
