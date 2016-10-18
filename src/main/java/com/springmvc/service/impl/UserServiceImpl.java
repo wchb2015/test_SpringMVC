@@ -18,19 +18,19 @@ public class UserServiceImpl implements UserService {
 
 
     public int saveUser(User user) {
-        System.out.println("___$$$   UserServiceImpl.saveUser()");
+        System.out.println("741852   UserServiceImpl.saveUser()");
         userDao.insertUser(user);
         return 0;
     }
 
     public List<User> queryUser(Map params) {
-        System.out.println("___$$$   UserServiceImpl.queryUser()");
+        System.out.println("741852   UserServiceImpl.queryUser()");
         userDao.selectUser(params);
         return null;
     }
 
     public UserServiceImpl() {
-        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
+        System.out.println("741852   " + this.getClass().getName() + "   initialize()");
     }
 
     public void setUserDao(UserDao userDao) {

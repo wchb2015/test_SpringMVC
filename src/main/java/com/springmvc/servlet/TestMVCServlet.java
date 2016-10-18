@@ -18,7 +18,7 @@ public class TestMVCServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        log.info("_______TestMVCServlet.doGet()!!!");
+        log.info("741852_______TestMVCServlet.doGet()!!!");
         TestService service = new TestService();
         service.save();
     }

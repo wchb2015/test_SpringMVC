@@ -7,6 +7,6 @@ public class TestDao {
     private Log log = LogFactory.getLog(this.getClass());
 
     public void save() {
-        log.info("_______TestDao.save()!!!");
+        log.info("741852_______TestDao.save()!!!");
     }
 }

@@ -4,10 +4,7 @@ import com.springmvc.model.Admin;
 import com.springmvc.model.User;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @org.springframework.stereotype.Controller
 public class TestController {
@@ -21,11 +18,17 @@ public class TestController {
      * @param itemId
      * @return
      */
-    @RequestMapping(value = "/test")
     @ResponseBody
+    @RequestMapping(value = "/test")
     public String editItems(Model model, @RequestParam(required = true) Integer itemId) {
         System.out.println(itemId);
         return "success!!!";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/time", method = RequestMethod.GET)
+    public String getCurrentTimeStamp() {
+        return String.valueOf(System.currentTimeMillis());
     }
 
     @RequestMapping(value = "/baseType")

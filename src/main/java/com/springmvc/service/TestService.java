@@ -8,7 +8,7 @@ public class TestService {
     private Log log = LogFactory.getLog(this.getClass());
 
     public void save() {
-        log.info("_______TestService.save()!!!");
+        log.info("741852_______TestService.save()!!!");
         TestDao dao = new TestDao();
         dao.save();
     }

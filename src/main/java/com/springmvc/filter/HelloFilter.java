@@ -13,17 +13,17 @@ public class HelloFilter implements Filter {
         filterConfig.getFilterName();
         filterConfig.getServletContext();
         filterConfig.getInitParameterNames();
-        LOG.info("___$$$   HelloFilter_init()!");
+        LOG.info("741852   HelloFilter_init()!");
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-        LOG.info("___$$$   HelloFilter_doFilter()_start!");
+        LOG.info("741852   HelloFilter_doFilter()_start!");
         chain.doFilter(request, response);
-        LOG.info("___$$$   HelloFilter_doFilter()_end!");
+        LOG.info("741852   HelloFilter_doFilter()_end!");
     }
 
     public void destroy() {
-        LOG.info("___$$$   HelloFilter_destroy()!");
+        LOG.info("741852   HelloFilter_destroy()!");
     }
 }

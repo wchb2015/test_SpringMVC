@@ -10,16 +10,16 @@ import java.util.Map;
 public class UserDao {
 
     public int insertUser(User user) {
-        System.out.println("___$$$   UserDao.inserUser()");
+        System.out.println("741852   UserDao.InsertUser()");
         return 0;
     }
 
     public List<User> selectUser(Map params) {
-        System.out.println("___$$$   UserDao.selectUser()");
+        System.out.println("741852   UserDao.selectUser()");
         return null;
     }
 
     public UserDao() {
-        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
+        System.out.println("741852   " + this.getClass().getName() + "   initialize()");
     }
 }

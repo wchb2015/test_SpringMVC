@@ -22,7 +22,7 @@ public class TestCookieA extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        LOG.info("#####" + Thread.currentThread().getName());
+        LOG.info("741852" + Thread.currentThread().getName());
         String id = UUID.randomUUID().toString();
         Cookie testCookie = new Cookie("testCookie", id);
         Cookie lastTime = new Cookie("lastTime", new Date().toString());
@@ -32,7 +32,5 @@ public class TestCookieA extends HttpServlet {
 
         resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().print("已经给你发送了Cookie!");
-
-
     }
 }

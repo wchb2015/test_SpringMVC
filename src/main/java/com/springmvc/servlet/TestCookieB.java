@@ -19,7 +19,7 @@ public class TestCookieB extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LOG.info("#####" + Thread.currentThread().getName());
+        LOG.info("741852" + Thread.currentThread().getName());
         Cookie[] cookies = request.getCookies();
         String msg = null;
 
@@ -35,7 +35,6 @@ public class TestCookieB extends HttpServlet {
         if (StringUtils.isEmpty(msg)) {
             msg = "您是第一次登陆~!";
         }
-
 
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().print(msg);
