@@ -20,8 +20,11 @@ public class TestOncePerRequestFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                                     FilterChain filterChain) throws ServletException, IOException {
         System.out.println("doFilterInternal 741");
-        filterChain.doFilter(httpServletRequest, httpServletResponse);
+        boolean flag = false;
+        if (flag) {
+            filterChain.doFilter(httpServletRequest, httpServletResponse);
+        } else {
+            httpServletResponse.sendRedirect("/column/index");
+        }
     }
-
-
 }

@@ -18,7 +18,6 @@ import java.io.IOException;
  * 这说明我们需要保证“调包”之后的request对象中所有方法都要与“调包”之前一样可以使用,并且getParameter()方法还要有能力返回转码之后的参数.
  */
 
-
 public class EncodingFilter implements Filter {
     String charset = null;
 
