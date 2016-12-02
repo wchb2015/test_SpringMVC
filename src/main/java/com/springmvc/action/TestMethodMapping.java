@@ -12,7 +12,7 @@ public class TestMethodMapping {
 
     @RequestMapping(value = "/t1", method = RequestMethod.GET)
     @ResponseBody
-    public String test(@RequestParam(defaultValue = "1") int pageNum, @RequestParam("ps") int pageSize,
+    public String test(@RequestParam(defaultValue = "1") int pageNum, @RequestParam("ps") Long pageSize,
                        @RequestParam String rpStr, String tagName, @RequestParam Long userId, @RequestParam int intId) {
         return pageNum + "_" + pageSize + "_" + rpStr + "_" + tagName;
     }
