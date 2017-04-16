@@ -11,6 +11,7 @@
     <name>test_springmvc</name>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <slf4j.version>1.7.21</slf4j.version>
         <spring.version>4.2.0.RELEASE</spring.version>
     </properties>
@@ -212,7 +213,7 @@
     <!--  Build Settings  -->
     <!-- http://maven.apache.org/pom.html#Build_Settings -->
     <build>
-        <finalName>${artifactId}-${version}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <resources>
             <resource>
                 <!-- directory: 资源所在的位置 -->
