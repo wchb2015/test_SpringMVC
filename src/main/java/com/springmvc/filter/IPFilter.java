@@ -1,7 +1,7 @@
 package com.springmvc.filter;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -11,9 +11,8 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-
 public class IPFilter implements Filter {
-    private Log LOG = LogFactory.getLog(this.getClass());
+    private Logger LOG = LoggerFactory.getLogger(IPFilter.class);
     private ServletContext context;
 
     public void init(FilterConfig filterConfig) throws ServletException {

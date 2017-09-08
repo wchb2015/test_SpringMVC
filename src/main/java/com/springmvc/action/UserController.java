@@ -3,6 +3,8 @@ package com.springmvc.action;
 
 import com.springmvc.model.User;
 import com.springmvc.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,15 +18,19 @@ import java.util.List;
 @RequestMapping("/user-module")
 public class UserController {
 
+    private Logger LOG = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserService userService;
 
     public UserController() {
-        System.out.println("___$$$   " + this.getClass().getName() + "   initialize()");
+        LOG.info("UserController init()");
     }
 
     @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
     public String getUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        LOG.info("info");
 
         List<User> userList = new ArrayList<User>();
 
