@@ -28,7 +28,7 @@ public class ExportController {
     }
 
     private void buildResponse(HttpServletResponse response, String fileName) {
-        response.setContentType("text/csv");
+        response.setContentType("text/csv;charset=UTF-8");
         response.setHeader("Content-Disposition", "attachment;filename=" + fileName);
     }
 
