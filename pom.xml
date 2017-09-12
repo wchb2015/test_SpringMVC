@@ -205,7 +205,7 @@
     <!--  Build Settings  -->
     <!-- http://maven.apache.org/pom.html#Build_Settings -->
     <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
+        <finalName>${project.artifactId}</finalName>
         <resources>
             <resource>
                 <!-- directory: 资源所在的位置 -->
