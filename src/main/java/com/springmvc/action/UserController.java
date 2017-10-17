@@ -1,5 +1,7 @@
 package com.springmvc.action;
 
+import com.springmvc.model.HttpResult;
+import com.springmvc.model.PageData;
 import com.springmvc.model.User;
 import com.springmvc.service.UserService;
 import org.slf4j.Logger;
@@ -7,9 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,14 +23,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    public UserController() {
-        LOG.info("UserController init()");
-    }
-
+    @ResponseBody
     @RequestMapping(value = "/getAllUsers", method = RequestMethod.GET)
-    public String getUsers(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
-        LOG.info("info");
+    public HttpResult<PageData<User>> getUsers() throws Exception {
 
         List<User> userList = new ArrayList<User>();
 
@@ -40,18 +36,7 @@ public class UserController {
         userList.add(u2);
         userList.add(u3);
 
-        request.setAttribute("userList", userList);
-
-        userService.queryUser(null);
-
-        return "userList";
-
-       /* ModelAndView modelAndView = new ModelAndView();
-
-        modelAndView.addObject("userList", userList);//相当于request的setAttribute,在jsp页面中通过userList取数据
-
-        modelAndView.setViewName("userList"); //指定视图*/
-
+        return HttpResult.success(new PageData<User>(100L, userList));
     }
 
     public void setUserService(UserService userService) {

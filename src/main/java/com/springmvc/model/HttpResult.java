@@ -17,4 +17,8 @@ public class HttpResult<E> {
         this.code = code;
         this.data = data;
     }
+
+    public static <E> HttpResult<E> success(E data) {
+        return new HttpResult<E>(200, data);
+    }
 }
