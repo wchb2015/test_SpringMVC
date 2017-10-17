@@ -1,7 +1,14 @@
 package com.springmvc.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.List;
 
+@Getter
+@Setter
+@ToString
 public class Page<T> implements java.io.Serializable {
 
     private static final long serialVersionUID = -3019215476521614796L;
@@ -50,69 +57,4 @@ public class Page<T> implements java.io.Serializable {
             }
         }
     }
-
-    public long getTotalPage() {
-        return totalPage;
-    }
-
-    public void setTotalPage(long totalPage) {
-        this.totalPage = totalPage;
-    }
-
-    public long getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(long pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public long getTotalRecord() {
-        return totalRecord;
-    }
-
-    public void setTotalRecord(long totalRecord) {
-        this.totalRecord = totalRecord;
-    }
-
-    public long getPageNum() {
-        return pageNum;
-    }
-
-    public void setPageNum(long pageNum) {
-        this.pageNum = pageNum;
-    }
-
-    public long getStartIndex() {
-        return startIndex;
-    }
-
-    public void setStartIndex(long startIndex) {
-        this.startIndex = startIndex;
-    }
-
-    public List getList() {
-        return list;
-    }
-
-    public void setList(List list) {
-        this.list = list;
-    }
-
-    public long getStartPage() {
-        return startPage;
-    }
-
-    public void setStartPage(long startPage) {
-        this.startPage = startPage;
-    }
-
-    public long getEndPage() {
-        return endPage;
-    }
-
-    public void setEndPage(long endPage) {
-        this.endPage = endPage;
-    }
-
 }

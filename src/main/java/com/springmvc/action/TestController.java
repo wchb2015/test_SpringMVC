@@ -1,28 +1,33 @@
 package com.springmvc.action;
 
 import com.springmvc.model.Admin;
+import com.springmvc.model.HttpResult;
 import com.springmvc.model.User;
-import org.springframework.ui.Model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 @org.springframework.stereotype.Controller
 public class TestController {
 
+    private static final Logger logger = LoggerFactory.getLogger(TestController.class);
+
+
     /**
      * 通过@RequestParam对简单类型的参数进行绑定.
      * 如果不使用@RequestParam,要求request传入参数名称和controller方法的形参名称一致,方可绑定成功.
-     * 如果使用@RequestParam,不用限制request传入参数名称和controller方法的形参名称一致.
      *
-     * @param model
+     * @param uriId
      * @param itemId
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/test")
-    public String editItems(Model model, @RequestParam(required = true) Integer itemId) {
-        System.out.println(itemId);
-        return "success!!!";
+    @RequestMapping(value = "/test/{uriId}")
+    public HttpResult<String> editItems(@PathVariable Long uriId, @RequestParam Integer itemId) {
+        logger.info("itemId: {}", itemId);
+        logger.info("uriId: {}", uriId);
+        return new HttpResult(200, "success!");
     }
 
     @ResponseBody

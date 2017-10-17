@@ -1,6 +1,5 @@
 package com.springmvc.action;
 
-
 import com.springmvc.model.User;
 import com.springmvc.service.UserService;
 import org.slf4j.Logger;
