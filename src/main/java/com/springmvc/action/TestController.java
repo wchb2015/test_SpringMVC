@@ -8,11 +8,20 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+
 @org.springframework.stereotype.Controller
 public class TestController {
 
     private static final Logger logger = LoggerFactory.getLogger(TestController.class);
 
+    @ResponseBody
+    @RequestMapping(value = "/teamIds", method = {RequestMethod.POST, RequestMethod.GET})
+    public HttpResult<String> getXXXByTeamIds(@RequestParam("xxx") Long[] teamId) {
+        logger.info("teamIds:{}", Arrays.asList(teamId));
+
+        return new HttpResult(200, "success");
+    }
 
     /**
      * 通过@RequestParam对简单类型的参数进行绑定.
